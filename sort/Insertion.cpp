@@ -54,7 +54,7 @@ void Insertion2(vector<int>& nums, int& n){
 } // 折半插入排序
  
 void Insertion3(vector<int>& nums, int& n){
-	for(int stage = n / 2; stage >= 0; stage++){// 步长变化 
+	for(int stage = n / 2; stage >= 1; stage = stage / 2){// 步长变化 
 		for(int i = stage; i < n; i++){ // 直接插入排序 
 			if(nums[i] < nums[i - stage]){
 				int temp = nums[i];
