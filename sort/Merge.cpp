@@ -2,6 +2,10 @@
 #include<vector>
 
 using namespace std;
+/* 归并排序 -- 递归的方式：
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(n) 
+*/
 void merge(vector<int>& nums, int low, int mid, int high){
 	vector<int> temp(nums.size());
 	for(int l = low; l <= high; l++){
@@ -22,9 +26,9 @@ void merge(vector<int>& nums, int low, int mid, int high){
 void mergeSort(vector<int>& nums, int low, int high){
 	if(low < high){
 		int mid = low + (high - low) / 2;
-		mergeSort(nums, low, mid); //��� 
-		mergeSort(nums, mid + 1, high); //�Ҳ� 
-		merge(nums, low, mid, high); //�ϲ� 
+		mergeSort(nums, low, mid); 
+		mergeSort(nums, mid + 1, high); 
+		merge(nums, low, mid, high);  
 	}
 	
 }
